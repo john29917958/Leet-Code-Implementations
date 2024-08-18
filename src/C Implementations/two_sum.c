@@ -44,6 +44,7 @@ void print_answer(int *answer_arr, int size)
 int main(int argc, char **argv)
 {
     int inputSize = 4;
+    int target = 9;
     int *input = (int *)malloc(inputSize * sizeof(int));
     input[0] = 2;
     input[1] = 7;
@@ -51,10 +52,10 @@ int main(int argc, char **argv)
     input[3] = 15;
     int *returnSize = (int *)malloc(sizeof(int));
     *returnSize = 0;
-    int *answer = twoSum(input, inputSize, 9, returnSize);
+    int *answer = twoSum(input, inputSize, target, returnSize);
     if (answer == 0)
     {
-        printf("No values can be added up to target 9.\n");
+        printf("No number can be added up to target %d.\n", target);
     }
     else
     {
